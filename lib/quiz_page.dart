@@ -13,8 +13,10 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  /// ikonkalar
   List<Widget> icons = <Widget>[];
 
+  /// tuura ikonka
   Widget correctIcon = const Padding(
     padding: EdgeInsets.only(right: 8.0),
     child: FaIcon(
@@ -22,6 +24,8 @@ class _QuizPageState extends State<QuizPage> {
       color: Color(0xff4CAF4F),
     ),
   );
+
+  /// kata ikonka
   Widget wrongIcon = const Padding(
     padding: EdgeInsets.only(right: 8.0),
     child: FaIcon(
@@ -114,7 +118,10 @@ class _QuizPageState extends State<QuizPage> {
                     ),
                     const SizedBox(height: 20.0),
                     Row(
-                      children: icons,
+                      children: [
+                        correctIcon,
+                        wrongIcon,
+                      ],
                     ),
                   ],
                 ),
