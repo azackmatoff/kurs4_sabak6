@@ -1,23 +1,18 @@
-import 'dart:developer';
-
 import 'package:kurs4_sabak6/quiz_model.dart';
 
 class QuizBrain {
+  /// private
   int _index = 0;
   // questionsAndAnswers = suroolor jana jooptor
-  List<QuizModel> questionsAndAnswers = <QuizModel>[
-    QuizModel(question: 'Batken Ozgon oblastina karashtuu!', answer: false),
-    QuizModel(question: 'Bishkek 2-chi chon shaar', answer: false),
-    QuizModel(question: 'Kirgizstan egemenduu olko', answer: true),
+  final List<QuizModel> _questionsAndAnswers = <QuizModel>[
+    QuizModel(question: 'Batken Ozgon oblastina karashtuu!', answer: false), //0
+    QuizModel(question: 'Bishkek 2-chi chon shaar', answer: false), //1
+    QuizModel(question: 'Kirgizstan egemenduu olko', answer: true), //2
   ];
 
   String getQuestion() {
-    log('questionsAndAnswers.length: ${questionsAndAnswers.length}');
-
-    if (_index < questionsAndAnswers.length) {
-      log('getQuestion._index: $_index');
-      log('question: ${questionsAndAnswers[_index].question}');
-      return questionsAndAnswers[_index].question;
+    if (_index < _questionsAndAnswers.length) {
+      return _questionsAndAnswers[_index].question;
     } else {
       return 'buttu';
     }
@@ -25,12 +20,11 @@ class QuizBrain {
 
   void getNext() {
     _index++;
-    log('_index: $_index');
   }
 
   bool getAnswer() {
-    if (_index <= questionsAndAnswers.length) {
-      return questionsAndAnswers[_index].answer;
+    if (_index <= _questionsAndAnswers.length) {
+      return _questionsAndAnswers[_index].answer;
     }
   }
 
