@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:kurs4_sabak6/custom_button.dart';
-import 'package:kurs4_sabak6/sabaktar/sabaktar.dart';
+import 'package:kurs4_sabak6/widgets/custom_button.dart';
+import 'package:kurs4_sabak6/x_sabaktar/sabaktar.dart';
 
 /// const
 const String bulConst = 'Bul const tekst 2';

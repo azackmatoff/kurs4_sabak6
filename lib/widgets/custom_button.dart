@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kurs4_sabak6/app_constants/colors/app_colors.dart';
+import 'package:kurs4_sabak6/app_constants/text_styles/app_text_styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -18,7 +20,7 @@ class CustomButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: bgColor ?? const Color(0xffF44336), // background
+          primary: bgColor ?? AppColors.secondaryColor, // background
           onPrimary: Colors.white, // foreground
         ),
         onPressed: onPressed,
@@ -28,9 +30,7 @@ class CustomButton extends StatelessWidget {
           ),
           child: Text(
             buttonText,
-            style: const TextStyle(
-              fontSize: 26.0,
-            ),
+            style: AppTextStyles.buttonStyle,
           ),
         ),
       ),

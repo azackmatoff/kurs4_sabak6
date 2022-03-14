@@ -1,4 +1,4 @@
-import 'package:kurs4_sabak6/quiz_model.dart';
+import 'package:kurs4_sabak6/models/quiz_model.dart';
 
 class QuizBrain {
   /// private
